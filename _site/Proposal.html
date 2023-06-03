@@ -99,7 +99,34 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">1. Project Overview</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">1.1 Background</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">1.2 Motivation</a></li>
+  </ul></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">2. Data Source</a>
+  <ul class="collapse">
+  <li><a href="#data-dictionary-and-nodes" id="toc-data-dictionary-and-nodes" class="nav-link" data-scroll-target="#data-dictionary-and-nodes">2.1 Data dictionary and nodes</a></li>
+  <li><a href="#bundles" id="toc-bundles" class="nav-link" data-scroll-target="#bundles">2.2 Bundles</a></li>
+  <li><a href="#domain-knowledge-reference" id="toc-domain-knowledge-reference" class="nav-link" data-scroll-target="#domain-knowledge-reference">2.3 Domain Knowledge Reference:</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">3. Methodology</a>
+  <ul class="collapse">
+  <li><a href="#i.-building-background-knowledge" id="toc-i.-building-background-knowledge" class="nav-link" data-scroll-target="#i.-building-background-knowledge">i. Building background knowledge</a></li>
+  <li><a href="#ii.-data-cleaning-and-preparation" id="toc-ii.-data-cleaning-and-preparation" class="nav-link" data-scroll-target="#ii.-data-cleaning-and-preparation">ii. Data Cleaning and Preparation:</a></li>
+  <li><a href="#iii.-define-analytical-goals" id="toc-iii.-define-analytical-goals" class="nav-link" data-scroll-target="#iii.-define-analytical-goals">iii. Define Analytical Goals:</a></li>
+  <li><a href="#iv.-exploratory-data-analysis-static-and-interactive" id="toc-iv.-exploratory-data-analysis-static-and-interactive" class="nav-link" data-scroll-target="#iv.-exploratory-data-analysis-static-and-interactive">iv. Exploratory Data Analysis (Static and Interactive)</a></li>
+  <li><a href="#v.-analysis-on-the-model-provided-by-fisheye" id="toc-v.-analysis-on-the-model-provided-by-fisheye" class="nav-link" data-scroll-target="#v.-analysis-on-the-model-provided-by-fisheye">v. Analysis on the Model provided by FishEye</a></li>
+  <li><a href="#vi.-identification-of-companies-engaged-in-illegal-fishing" id="toc-vi.-identification-of-companies-engaged-in-illegal-fishing" class="nav-link" data-scroll-target="#vi.-identification-of-companies-engaged-in-illegal-fishing">vi. Identification of Companies Engaged in Illegal Fishing</a></li>
+  </ul></li>
+  <li><a href="#project-prototype" id="toc-project-prototype" class="nav-link" data-scroll-target="#project-prototype">4. Project Prototype</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">5. Reference</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -126,8 +153,185 @@ ul.task-list{list-style: none;}
 
 </header>
 
+<section id="project-overview" class="level1">
+<h1>1. Project Overview</h1>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">1.1 Background</h2>
+<p>Seafood is the largest traded food commodity, providing sustenance to more than 3 billion people worldwide. The United Nations Food and Agricultural Organization estimates that 85% of fish stocks are either overfished or fully exploited (World Wildlife Fund, 2023). Given the reliance on fish supply, transhipment is an important part of the global commercial fishing industry.</p>
+<p>In a study conducted by researchers from City University of New York’s John Jay College of Criminal Justice, it was found that 130 key carriers (approximately 22% of the total involved in the study) conducted 72% of detected “Regional fisheries management organisations” related transhipments. As seen from the image below, these transhipments typically happen across the ocean, with certain areas having a larger share of activity.</p>
+<p><img src="images/Proposal_Background.png" class="img-fluid" width="391"></p>
+<p>Transhipments at sea helps to increase fishing vessels’ efficiency via eliminating the need to offload their catches at port while reducing overall operating costs. However, it also brings about the issues of enabling fishing vessels to obscure the catches origins which might have been caught illegally. (Boerder et al., 2018).</p>
+<p>Illegal, unreported and unregulated fishing is a huge concern as it leads to serious social, economic, and negative environmental impacts (World Ocean Review, 2013). According to a study conducted by the Financial Transparency Coalition, it found that IUU fishing accounts for one-fifth of the global fisheries’ catches (equivalent to approximately $23.5bn) annually. Global losses arising from IUU fishing are also estimated to be approximately $50bn.</p>
+</section>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">1.2 Motivation</h2>
+<p>Given the global social, economic and environmental adverse effects arising from IUU fishing, we seek to gain a better understanding on the network activities of influential and key players, otherwise known as central actors who are involved in transhipment activities. The team look forward towards gaining a better understanding and analysing the key players involved in transhipment activities, as well as the overall network and spatial patterns by leveraging on R Studio and fundamentals of Social Network Analysis.</p>
+<p>Identification of carrier vessels responsible for transshipment is the first step forward towards offering key insights and opportunities towards improving oversight on illegal fishing. With our insights gained, the team will then put forth recommendations towards how IUU fishing can be better managed and regulated in the longer term.</p>
+</section>
+</section>
+<section id="data-source" class="level1">
+<h1>2. Data Source</h1>
+<p>here are 2 sets of data.</p>
+<section id="data-dictionary-and-nodes" class="level2">
+<h2 class="anchored" data-anchor-id="data-dictionary-and-nodes">2.1 Data dictionary and nodes</h2>
+<p>It’s a directed multi-graph, so multiple edges between the same two nodes are possible. The graph format is a json format intended to match d3’s node-link format and be compatible with network. node_link_graph. Since it’s a network Graph data, there’s link and node relate to it.</p>
+<table class="table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 53%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Node Attributes</strong>&nbsp;</th>
+<th><strong>Meaning</strong>&nbsp;</th>
+<th><strong>Action</strong>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id&nbsp;</td>
+<td>Name of the company that originated (or received) the shipment&nbsp;&nbsp;</td>
+<td>Keep and use&nbsp;</td>
+</tr>
+<tr class="even">
+<td>shpcountry&nbsp;</td>
+<td>Country the company most often associated with when shipping&nbsp;&nbsp;</td>
+<td>Keep and use</td>
+</tr>
+<tr class="odd">
+<td>rcvcountry&nbsp;</td>
+<td>Country the company most often associated with when receiving&nbsp;&nbsp;</td>
+<td>Keep and use&nbsp;</td>
+</tr>
+<tr class="even">
+<td>dataset&nbsp;&nbsp;</td>
+<td>Always ‘MC2’&nbsp;</td>
+<td>remove</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 53%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Edge Attributes</strong>&nbsp;</th>
+<th><strong>Meaning</strong>&nbsp;</th>
+<th><strong>Action</strong>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>arrivaldate&nbsp;</td>
+<td>Date the shipment arrived at port in YYYY-MM-DD format&nbsp;</td>
+<td>Keep and use&nbsp;</td>
+</tr>
+<tr class="even">
+<td>hscode&nbsp;</td>
+<td>Harmonized System code for the shipment. Can be joined with the hscodes table to get additional details.&nbsp;</td>
+<td>Keep and use&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>valueofgoods_omu&nbsp;</td>
+<td>Customs-declared value of the total shipment, in Oceanus Monetary Units (OMU)&nbsp;</td>
+<td>Keep and use&nbsp;</td>
+</tr>
+<tr class="even">
+<td>volumeteu&nbsp;</td>
+<td>The volume of the shipment in ‘Twenty-foot equivalent units’, roughly how many 20-foot standard containers would be required.&nbsp;</td>
+<td>Keep and use&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>weightkg&nbsp;</td>
+<td>The weight of the shipment in kilograms (if known)&nbsp;</td>
+<td>Keep and use&nbsp;</td>
+</tr>
+<tr class="even">
+<td>dataset&nbsp;</td>
+<td>Always ‘MC2’&nbsp;</td>
+<td>remove</td>
+</tr>
+<tr class="odd">
+<td>type&nbsp;</td>
+<td>Always ‘shipment’ for MC2&nbsp;</td>
+<td>remove</td>
+</tr>
+<tr class="even">
+<td>generated_by</td>
+<td>Name of the program that generated the edge. (Only found on bundle’ records.)&nbsp;</td>
+<td>Keep and use</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bundles" class="level2">
+<h2 class="anchored" data-anchor-id="bundles">2.2 Bundles</h2>
+<p>Each bundle represents the output of an AI program for link inference. Each bundle represents a list of potential edges to add to the main graph. Bundles have specific fish type such as carp, catfish, chub_mackerel, cod2, herring, lichen, mackerel, pollock, salmon, salmon_wgl, shark,tuna.</p>
+</section>
+<section id="domain-knowledge-reference" class="level2">
+<h2 class="anchored" data-anchor-id="domain-knowledge-reference">2.3 Domain Knowledge Reference:</h2>
+<p>Illegal fishing tend to happened on the international sea area together with other illegal activities. ​(Gohar A. Petrossian*, 2022)​</p>
+<p>The research found that illegal fishing activities in the area occurred at three levels, namely illegal fishing in communal networks, illegal fishing in associational networks and illegal fishing in industrial networks. The pattern of illegal fishing that occurs in communal networks is done by small fishermen (peasant fisher) with the characteristics of the use of traditional fishing gear, small scale, limited area and relatively subsistence. In an associational network the pattern of illegal fishing takes place on a wider scale, carried out by a post-peasant fisher with a more modern fishing gear, and involving local apparatus and officials. Meanwhile, illegal fishing in industrial networks is conducted by corporations involving high-ranking officials of policy-making countries at the central level, as well as by industry-scale entrepreneurs and fishermen.</p>
+</section>
+</section>
+<section id="methodology" class="level1">
+<h1>3. Methodology</h1>
+<p>We will follow the standard Data Analytics Process and methodology here:</p>
+<section id="i.-building-background-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="i.-building-background-knowledge">i. Building background knowledge</h2>
+<p>The team should read up on some of the basic facts about illegal fishing as well as have basic understanding of HSCODE and how international trade works. The team should know which are the most commonly found illegal fishing species.</p>
+</section>
+<section id="ii.-data-cleaning-and-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-data-cleaning-and-preparation">ii. Data Cleaning and Preparation:</h2>
+<p>Familiarize ourselves with the FishEye knowledge graph and the predicted links provided.</p>
+<p>Understand the structure of the graph, including the nodes and edges, and any additional attributes associated with them. (Research and read about background knowledge such as HSCODE)</p>
+<p>Clean the data by handling missing or inconsistent values, ensuring the quality and reliability of the graph.</p>
+</section>
+<section id="iii.-define-analytical-goals" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-define-analytical-goals">iii. Define Analytical Goals:</h2>
+</section>
+<section id="iv.-exploratory-data-analysis-static-and-interactive" class="level2">
+<h2 class="anchored" data-anchor-id="iv.-exploratory-data-analysis-static-and-interactive">iv. Exploratory Data Analysis (Static and Interactive)</h2>
+<p>In this stage, we may use static charts and plots or use Interative diagrams to do the analysis. Below are some example category of analysis</p>
+<ol type="a">
+<li>Basic Analysis: Perform initial exploratory analysis to understand the data distribution, summary statistics, and identify any outliers or anomalies.Create visualizations like histograms, box plots, or bar charts to visualize the distribution of attributes like valueofgoods_omu, volumeteu, and weightkg.</li>
+<li>Individual Entity Analysis: This Step focus on analyzing temporal patterns for individual entities (companies in this case). This can help identify trends, seasonality, or changes in their shipping behavior over time. We could consider analyze the arrivaldate attribute to understand patterns such as seasonality, growth trends, or sporadic activity for each company. Create visualizations such as line charts to show the number of shipments, volume, or value of goods over different time periods (e.g., months, quarters, years) for each company. Group the data by the company’s id and aggregate the shipment counts or other relevant metrics by date.</li>
+<li>Relationship Analysis: This step is to explore relationships between entities (companies) to identify business relationship patterns. Visualize the connections between companies using network graphs or Sankey diagrams, where the nodes represent companies, and the edges represent shipments (frequency, volume, weight, connectivity centrality etc) between them. Analyze the frequency, volume, or value of shipments between different pairs of companies over time to uncover patterns such as preferred trading partners or seasonal variations in trade relationships.We will use R shiny to allow selection and plot the network diagram for specific companies.</li>
+<li>Categorize Business Relationship Patterns: Based on the analysis results, categorize the observed business relationship patterns. For example, there might be patterns like consistent trading partners, sporadic trading, or cyclic trading patterns/ or Transhippment/wholeseller, fishing vessel, buyer. We may perform some clustering using K-Means or Hierarchical Clustering, then indicate these K-Means or Hierarchical Clustering result with colors, annotations, or legends to indicate the different categories of business relationships in the visualizations. [centrality/social network clustering]</li>
+<li>Trade Knowledge based Analysis: Given the team may look into pattern of illegal fishing, we could look at specific HSCODE groups and categories, which is more likely to prompt to IUU problem, and look at the interaction between companies involved in the trade for such goods.</li>
+</ol>
+</section>
+<section id="v.-analysis-on-the-model-provided-by-fisheye" class="level2">
+<h2 class="anchored" data-anchor-id="v.-analysis-on-the-model-provided-by-fisheye">v. Analysis on the Model provided by FishEye</h2>
+<p>Transform and Load and Assess the sets of predicted knowledge graph links provided by FishEye. Compare the predicted links against known ground truth or existing reliable links in the dataset. (The core dataset)</p>
+<p>Create visualizations like network graphs or Sankey diagrams to display the relationships between entities based on the predicted links. Evaluate the reliability of each set of predicted links based on the coherence of the relationships and the consistency with existing knowledge.</p>
+<p>Identify the sets of predicted links that align most closely with the known ground truth or existing reliable links, indicating their reliability for completing the graph.</p>
+</section>
+<section id="vi.-identification-of-companies-engaged-in-illegal-fishing" class="level2">
+<h2 class="anchored" data-anchor-id="vi.-identification-of-companies-engaged-in-illegal-fishing">vi. Identification of Companies Engaged in Illegal Fishing</h2>
+<p>Utilize visualizations to identify companies that fit a pattern of illegal fishing. Analyze attributes such as shpcountry, rcvcountry, hscode, and valueofgoods_omu to detect suspicious trade activities.</p>
+<p>Use network graphs or heatmaps to identify clusters or patterns associated with known instances of illegal fishing. Explore relationships between companies involved in the trade of fishing-related products, their countries of origin, and known fishing hotspots.</p>
+<p>Highlight the suspicious patterns and connections through visualizations, demonstrating how they indicate potential illegal fishing activities.</p>
+</section>
+</section>
+<section id="project-prototype" class="level1">
+<h1>4. Project Prototype</h1>
+<p><img src="images/Proposal_Dashboard_1.PNG" class="img-fluid" width="426"></p>
+<p><img src="images/Proposal_Dashboard_2.PNG" class="img-fluid" width="426"></p>
+<p><img src="images/Proposal_Dashboard_3.PNG" class="img-fluid" width="427"></p>
+<p><img src="images/Proposal_Dashboard_4.PNG" class="img-fluid" width="428"></p>
+<p><img src="images/Proposal_Dashboard_5.PNG" class="img-fluid" width="430"></p>
+</section>
+<section id="reference" class="level1">
+<h1>5. Reference</h1>
+<pre><code>                    |</code></pre>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
