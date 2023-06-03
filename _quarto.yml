@@ -1,0 +1,42 @@
+project:
+  type: website
+
+website:
+  title: "ISSS608_VAA_GROUP15"
+  navbar:
+    logo: "images/icon.png"
+    pinned: true
+    align: left
+    max-height: 100px
+    left: 
+    - href: index.qmd
+      text: Home
+    - href: Proposal.qmd
+      text: Proposal
+    - href: UserGuide.qmd
+      text: User Guide   
+    - href: APP.qmd
+      text: APP
+    - href: Poster.qmd
+      text: Poster
+      
+  right:
+    - icon: github
+      href: https://github.com
+    - icon: envelope
+      aria-label: email
+      href: "2022@mitb.smu.edu.sg"  
+
+format:
+  html:
+    code-fold: true
+    code-summary: "show the code"
+    theme: flatly
+    css: styles.css
+    toc: true
+execute: 
+  echo: true
+  eval: true
+  warning: false
+  
+editor: visual

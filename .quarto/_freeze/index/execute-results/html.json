@@ -1,0 +1,14 @@
+{
+  "hash": "b670714a692460249486c82e8c7baa47",
+  "result": {
+    "markdown": "---\ntitle: \"ISSS608_VAA_GROUP15\"\n---\n\n\nThis is a Quarto website.\n\nTo le\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

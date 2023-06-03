@@ -1,0 +1,31 @@
+---
+about:
+  template: jolla
+  id: about-block
+  image: "images/Illegal_fishing.jpg"
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com
+---
+
+::: {#about-block}
+:::
+
+# VAST Challenge 2023!
+
+Oceanus, a country concerned about illegal, unreported, and unregulated (IUU) fishing, seeks help from FishEye International to tackle this issue. FishEye's analysts have been given access to import/export data related to Oceanus' marine and fishing industries for their collaborative efforts.
+
+To facilitate analysis, FishEye has converted the trade data into a knowledge graph. Using this graph, they aim to understand the complex network of business relationships, uncovering links that can contribute to combating IUU fishing and protecting affected marine species.
+
+This Visual Analytics Project is based on [VAST Challenge 2022 Mini-Challenge 2](https://vast-challenge.github.io/2023/MC2.html)
+
+Find out following topics by exploring this website:
+
+\- Identify temporal patterns for individual entities and between entities.
+
+\- Identify new patterns and/or anomalies that are present in the knowledge graph.
+
+\- Identify companies that fit a pattern of illegal fishing.
+
+Hope that browsing this web brings you as much joy as we experienced in creating it.

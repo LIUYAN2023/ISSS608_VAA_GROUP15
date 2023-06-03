@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "show the code\n1 + 1\n\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ISSS608_VAA_GROUP15",
+    "section": "",
+    "text": "VAST Challenge 2023!\nOceanus, a country concerned about illegal, unreported, and unregulated (IUU) fishing, seeks help from FishEye International to tackle this issue. FishEye’s analysts have been given access to import/export data related to Oceanus’ marine and fishing industries for their collaborative efforts.\nTo facilitate analysis, FishEye has converted the trade data into a knowledge graph. Using this graph, they aim to understand the complex network of business relationships, uncovering links that can contribute to combating IUU fishing and protecting affected marine species.\nThis Visual Analytics Project is based on VAST Challenge 2022 Mini-Challenge 2\nFind out following topics by exploring this website:\n- Identify temporal patterns for individual entities and between entities.\n- Identify new patterns and/or anomalies that are present in the knowledge graph.\n- Identify companies that fit a pattern of illegal fishing.\nHope that browsing this web brings you as much joy as we experienced in creating it."
+  }
+]
