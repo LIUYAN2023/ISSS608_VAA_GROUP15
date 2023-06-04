@@ -9,39 +9,43 @@ editor: visual
 
 ## 1.1 Background
 
-Seafood is the largest traded food commodity, providing sustenance to more than 3 billion people worldwide. The United Nations Food and Agricultural Organization estimates that 85% of fish stocks are either overfished or fully exploited (World Wildlife Fund, 2023). Given the reliance on fish supply, transhipment is an important part of the global commercial fishing industry.
+Seafood is the largest traded food commodity, providing sustenance to more than 3 billion people worldwide. The United Nations Food and Agricultural Organization estimates that 85% of fish stocks are either overfished or fully exploited (World Wildlife Fund, 2023). Given the reliance on fish supply, transshipment is an important part of the global commercial fishing industry.
 
-In a study conducted by researchers from City University of New York's John Jay College of Criminal Justice, it was found that 130 key carriers (approximately 22% of the total involved in the study) conducted 72% of detected "Regional fisheries management organisations" related transhipments. As seen from the image below, these transhipments typically happen across the ocean, with certain areas having a larger share of activity.
+In a study conducted by researchers from City University of New York's John Jay College of Criminal Justice, it was found that 130 key carriers (approximately 22% of the total involved in the study) conducted 72% of detected "Regional fisheries management organisations" related transshipments. As seen from the image below, these transshipments typically happen across the ocean, with certain areas having a larger share of activity (The Pew Charitable Trusts, 2023).
 
 ![](images/Proposal_Background.png){width="391"}
 
-Transhipments at sea helps to increase fishing vessels' efficiency via eliminating the need to offload their catches at port while reducing overall operating costs. However, it also brings about the issues of enabling fishing vessels to obscure the catches origins which might have been caught illegally. (Boerder et al., 2018).
+Transshipment is defined as the practice of larger fishing vessels and those fishing within the high seas offloading their catch to fishing vessels while being resupplied with essentials such as food, water and fuel. Transshipments at sea helps to increase fishing vessels' efficiency via eliminating the need to offload their catches at port while reducing overall operating costs. However, it also brings about the issues of enabling fishing vessels to obscure the catches origins which might have been caught illegally. (Boerder et al., 2018).
 
-Illegal, unreported and unregulated fishing is a huge concern as it leads to serious social, economic, and negative environmental impacts (World Ocean Review, 2013). According to a study conducted by the Financial Transparency Coalition, it found that IUU fishing accounts for one-fifth of the global fisheries' catches (equivalent to approximately \$23.5bn) annually. Global losses arising from IUU fishing are also estimated to be approximately \$50bn.
+Illegal, unreported and unregulated fishing is a huge concern as it leads to serious social, economic, and negative environmental impacts (World Ocean Review, 2013). According to a study conducted by the Financial Transparency Coalition, it found that IUU fishing accounts for one-fifth of the global fisheries' catches (equivalent to approximately \$23.5bn) annually. Global losses arising from IUU fishing are also estimated to be approximately \$50bn (Collyns, 2022).
+
+### Domain Knowledge Reference:
+
+Illegal fishing tend to happened on the international sea area together with other illegal activities. (Gohar A. Petrossian\*, 2022) Research found that illegal fishing activities in the area occurred at three levels, namely illegal fishing in communal networks, illegal fishing in associational networks and illegal fishing in industrial networks. The pattern of illegal fishing occurring in communal networks is done by small fishermen (peasant fisher) with the characteristics of the use of traditional fishing gear, small scale, limited area and relatively subsistence. In an associational network, the pattern of illegal fishing takes place on a wider scale, carried out by a post-peasant fisher with a more modern fishing gear, and involving local apparatus and officials. Meanwhile, illegal fishing in industrial networks is conducted by corporations involving high-ranking officials of policy-making countries at the central level, as well as by industry-scale entrepreneurs and fishermen.
 
 ## 1.2 Motivation
 
-Given the global social, economic and environmental adverse effects arising from IUU fishing, we seek to gain a better understanding on the network activities of influential and key players, otherwise known as central actors who are involved in transhipment activities. The team look forward towards gaining a better understanding and analysing the key players involved in transhipment activities, as well as the overall network and spatial patterns by leveraging on R Studio and fundamentals of Social Network Analysis.
+Given the global social, economic and environmental adverse effects arising from IUU fishing, we seek to gain a better understanding on the network activities of influential and key players, otherwise known as central actors who are involved in transshipment activities. The team look forward towards gaining a better understanding and analysing the key players involved in transshipment activities, as well as the overall network and spatial patterns by leveraging on R Studio and fundamentals of Social Network Analysis.
 
 Identification of carrier vessels responsible for transshipment is the first step forward towards offering key insights and opportunities towards improving oversight on illegal fishing. With our insights gained, the team will then put forth recommendations towards how IUU fishing can be better managed and regulated in the longer term.
 
 # 2. Data Source
 
-here are 2 sets of data.
+There are 2 sets of data from the [Mini-Challenge 2](https://vast-challenge.github.io/2023/MC2.html) of [VAST Challenge 2023](https://vast-challenge.github.io/2023/). The first set of data is called "mc2_challenge_graph" with further details on the specific attributes elaborated within Section 2.1 while the second set of data contains a set of bundle files as elaborated in Section 2.2.
 
-## 2.1 Data dictionary and nodes
+## 2.1 Key Data Dictionary and Nodes
 
-It's a directed multi-graph, so multiple edges between the same two nodes are possible. The graph format is a json format intended to match d3's node-link format and be compatible with network. node_link_graph. Since it's a network Graph data, there's link and node relate to it.
+"mc2_challenge_graph" is a directed multi-graph, therefore it is possible for multiple edges between the same two nodes to exist. The graph format is saved as a json format, we will break it to match node-link format and make it compatible with network graph. Since it's a network Graph data, there are links and nodes related to it.
 
-| **Node Attributes**  | **Meaning**                                                      | **Action**    |
-|-----------------|---------------------------------------|-----------------|
+| **Node Attributes**  | Description                                                      | **Action**    |
+|------------------|-------------------------------------|------------------|
 | id                   | Name of the company that originated (or received) the shipment   | Keep and use  |
 | shpcountry           | Country the company most often associated with when shipping     | Keep and use  |
 | rcvcountry           | Country the company most often associated with when receiving    | Keep and use  |
 | dataset              | Always 'MC2'                                                     | remove        |
 
-| **Edge Attributes**  | **Meaning**                                                                                                                    | **Action**    |
-|-----------------|---------------------------------------|-----------------|
+| **Edge Attributes**  | Description                                                                                                                    | **Action**    |
+|------------------|-------------------------------------|------------------|
 | arrivaldate          | Date the shipment arrived at port in YYYY-MM-DD format                                                                         | Keep and use  |
 | hscode               | Harmonized System code for the shipment. Can be joined with the hscodes table to get additional details.                       | Keep and use  |
 | valueofgoods_omu     | Customs-declared value of the total shipment, in Oceanus Monetary Units (OMU)                                                  | Keep and use  |
@@ -53,72 +57,118 @@ It's a directed multi-graph, so multiple edges between the same two nodes are po
 
 ## 2.2 Bundles
 
-Each bundle represents the output of an AI program for link inference. Each bundle represents a list of potential edges to add to the main graph. Bundles have specific fish type such as carp, catfish, chub_mackerel, cod2, herring, lichen, mackerel, pollock, salmon, salmon_wgl, shark,tuna.
+Each bundle represents the **output of an AI program for link inference**. Each bundle **represents a list of potential edges to add to the main graph**. Bundles have specific fish type such as carp, catfish, chub_mackerel, cod2, herring, lichen, mackerel, pollock, salmon, salmon_wgl, shark,tuna.
 
-## 2.3 Domain Knowledge Reference:
+## 2.3 External Data Reference: Harmonised System Codes from Connect2India
 
-Illegal fishing tend to happened on the international sea area together with other illegal activities. ​(Gohar A. Petrossian\*, 2022)​
+As the dataset provided involves Harmonised Systems Codes (HSCodes), the team will also be leveraging on Connect2India HSCodes to gain a better understanding on the various HSCODE chapters and subchapters in order to understand which HSCodes are relevant for the study in relation to IUU fishing. Harmonised System Codes is an international nomenclature (at 6-digit) level developed by the World Customs Organisations specifically for goods classification (Singapore Customs, 2023). The team extracted the HSCodes and the associated information from Connect2India website via the link below:
 
-The research found that illegal fishing activities in the area occurred at three levels, namely illegal fishing in communal networks, illegal fishing in associational networks and illegal fishing in industrial networks. The pattern of illegal fishing that occurs in communal networks is done by small fishermen (peasant fisher) with the characteristics of the use of traditional fishing gear, small scale, limited area and relatively subsistence. In an associational network the pattern of illegal fishing takes place on a wider scale, carried out by a post-peasant fisher with a more modern fishing gear, and involving local apparatus and officials. Meanwhile, illegal fishing in industrial networks is conducted by corporations involving high-ranking officials of policy-making countries at the central level, as well as by industry-scale entrepreneurs and fishermen.
+• [HSN Code 3 - HS codes of Fish, crustaceans, molluscs, aquatic invertebrates ne (connect2india.com)](https://connect2india.com/hs-codes-directory/hs-code-3)
 
-# 3. Methodology
+# 3. Outline of Analytical Goals
 
-We will follow the standard Data Analytics Process and methodology here:
+In this proposal, the team will adopt a visual analytics approach to analyze trade records and identify temporal patterns and business relationship patterns among entities in the knowledge graph provided by FishEye. Our aim is to provide insights into the reliability of predicted knowledge graph links, and detect companies that are likely involved in illegal fishing, before finally ending off with a reflection on the learning points and key challenges faced during the project.
 
-## i. Building background knowledge
+## 3.1. Temporal Patterns and Business Relationships:
 
-The team should read up on some of the basic facts about illegal fishing as well as have basic understanding of HSCODE and how international trade works. The team should know which are the most commonly found illegal fishing species.
+Our first goal is to identify temporal patterns for individual entities and between entities in the knowledge graph FishEye created from trade records. We will leverage visual analytics techniques to uncover patterns and categorize different types of business relationships.
 
-## ii. Data Cleaning and Preparation:
+## 3.2. Evaluation of Predicted Knowledge Graph Links:
 
-Familiarize ourselves with the FishEye knowledge graph and the predicted links provided.
+The second goal is to evaluate the reliability of different sets of predicted knowledge graph links provided by FishEye. Using visual analytics, we will assess the quality and accuracy of these sets, determining which ones are most reliable for completing the graph.
 
-Understand the structure of the graph, including the nodes and edges, and any additional attributes associated with them. (Research and read about background knowledge such as HSCODE)
+## 3.3. Identification of Companies Involved in Illegal Fishing:
 
-Clean the data by handling missing or inconsistent values, ensuring the quality and reliability of the graph.
+We will utilize visualizations to identify companies that fit a pattern of illegal fishing. Through the application of visual analytics techniques, we will present the thought process and showcase our confidence in the identified companies.
 
-## iii. Define Analytical Goals:
+## 3.4. Reflections:
 
-## iv. Exploratory Data Analysis (Static and Interactive)
+Lastly, we will reflect on the team's learning points and key challenges faced when working with the knowledge graph. The team will also highlight relevant tools and resources that are useful for future similar projects.
 
-In this stage, we may use static charts and plots or use Interative diagrams to do the analysis. Below are some example category of analysis
+# 4. Methodology
 
-a.  Basic Analysis: Perform initial exploratory analysis to understand the data distribution, summary statistics, and identify any outliers or anomalies.Create visualizations like histograms, box plots, or bar charts to visualize the distribution of attributes like valueofgoods_omu, volumeteu, and weightkg.
-b.  Individual Entity Analysis: This Step focus on analyzing temporal patterns for individual entities (companies in this case). This can help identify trends, seasonality, or changes in their shipping behavior over time. We could consider analyze the arrivaldate attribute to understand patterns such as seasonality, growth trends, or sporadic activity for each company. Create visualizations such as line charts to show the number of shipments, volume, or value of goods over different time periods (e.g., months, quarters, years) for each company. Group the data by the company's id and aggregate the shipment counts or other relevant metrics by date.
-c.  Relationship Analysis: This step is to explore relationships between entities (companies) to identify business relationship patterns. Visualize the connections between companies using network graphs or Sankey diagrams, where the nodes represent companies, and the edges represent shipments (frequency, volume, weight, connectivity centrality etc) between them. Analyze the frequency, volume, or value of shipments between different pairs of companies over time to uncover patterns such as preferred trading partners or seasonal variations in trade relationships.We will use R shiny to allow selection and plot the network diagram for specific companies.
-d.  Categorize Business Relationship Patterns: Based on the analysis results, categorize the observed business relationship patterns. For example, there might be patterns like consistent trading partners, sporadic trading, or cyclic trading patterns/ or Transhippment/wholeseller, fishing vessel, buyer. We may perform some clustering using K-Means or Hierarchical Clustering, then indicate these K-Means or Hierarchical Clustering result with colors, annotations, or legends to indicate the different categories of business relationships in the visualizations. \[centrality/social network clustering\]
-e.  Trade Knowledge based Analysis: Given the team may look into pattern of illegal fishing, we could look at specific HSCODE groups and categories, which is more likely to prompt to IUU problem, and look at the interaction between companies involved in the trade for such goods.
+The team will adopt the standard Data Analytics Process and methodology as following steps:
 
-## v. Analysis on the Model provided by FishEye
+## 4.1. Background Research & Knowledge Acquisition
 
-Transform and Load and Assess the sets of predicted knowledge graph links provided by FishEye. Compare the predicted links against known ground truth or existing reliable links in the dataset. (The core dataset)
+The team will perform research to gain a better understanding on the IUU fishing, various industrial HSCODE as well as the mechanism of international trade. With the research, the team will then be well equipped with knowledge on the most commonly found illegal fishing species.
 
-Create visualizations like network graphs or Sankey diagrams to display the relationships between entities based on the predicted links. Evaluate the reliability of each set of predicted links based on the coherence of the relationships and the consistency with existing knowledge.
+## 4.2. Data Cleaning and Preparation
 
-Identify the sets of predicted links that align most closely with the known ground truth or existing reliable links, indicating their reliability for completing the graph.
+After a thorough understanding of the FishEye knowledge graph and the predicted links provided from the MC2 Challenge, the team will then proceed to clean the data by handling missing or inconsistent values to ensure the quality of the analysis performed subsequently. Besides, data wrangling will be implemented if necessary.
 
-## vi. Identification of Companies Engaged in Illegal Fishing
+## 4.3. Exploratory Data Analysis
 
-Utilize visualizations to identify companies that fit a pattern of illegal fishing. Analyze attributes such as shpcountry, rcvcountry, hscode, and valueofgoods_omu to detect suspicious trade activities.
+Within this stage, the team will be leveraging on static charts, plots as well as interactive diagrams to perform the relevant analysis. Below are some examples of possible analysis:
 
-Use network graphs or heatmaps to identify clusters or patterns associated with known instances of illegal fishing. Explore relationships between companies involved in the trade of fishing-related products, their countries of origin, and known fishing hotspots.
+### 4.3.1. Basic Exploratory Analysis
 
-Highlight the suspicious patterns and connections through visualizations, demonstrating how they indicate potential illegal fishing activities.
+This involves performing initial exploratory analysis to understand the data distribution, summary statistics, and identify any outliers or anomalies. Visualizations such as histograms, box plots, or bar charts can be used to visualise the distribution of attributes such as valueofgoods_omu, volumeteu, and weightkg.
 
-# 4. Project Prototype
+### 4.3.2. Individual Entity Analysis
+
+This section focuses on **analyzing temporal patterns for individual entities** (such as companies). This can help identify trends, seasonality, or changes in their shipping behaviour over time. The team can also consider analysing the arrivaldate attribute to understand patterns such as seasonality, growth trends, or sporadic activity for each company. Visualisations such as line charts can also be created to show the **number of shipments, volume, or value of goods over different time periods (e.g., months, quarters, years) for each company.**
+
+### 4.3.3. Relationship Analysis
+
+This section focuses on exploring relationships between entities (companies) to identify business relationship patterns. This can be done via the steps outlined below:
+
+• Visualize the **connections between companies using network graphs or Sankey diagrams**, where the nodes represent companies, and the edges represent shipments (frequency, volume, weight, connectivity centrality etc) between them.
+
+• Analyze the **frequency, volume, or value of shipments** between different pairs of companies **over time to uncover patterns such as preferred trading partners** or seasonal variations in trade relationships.
+
+• We will use R shiny to allow selection and **plot the network diagram for specific companies**.
+
+### 4.3.4. Categorization of Business Relationship Patterns
+
+Based on the analysis results, the team can look towards categorizing the observed business relationship patterns. For example, the team might possibly uncover patterns such as consistent trading partners, sporadic trading, cyclic trading patterns between transshippments, fishing vessels and eventual buyers. The team will consider to leverage on Social Network Analysis tools via community/clustering detection involving Centrality, Group Components, Eigen Clustering to seek out the various underlying buckets of communities.
+
+### 4.3.5. Trade Knowledge Based Analysis
+
+The team will also delve into specific **HSCODE groups and categories**, which have a higher likelihood of being linked with IUU fishing, and zoom into the interactions between companies involved in the trade for such goods.
+
+All in all, given the prevalence of IUU fishing being a global issue, the team believes in creating a tool and application to enable ease of visualisation to help with identifying companies that fit IUU fishing patterns. From the above mentioned items highlighted in section 4.3, the team hopes to be able to efficiently explore relationships between companies involved in IUU fishing, gleam insights into IUU fish trends before providing recommendations towards tackling the said global issue.
+
+# 5. Proposed Visualisation & Project Prototype
+
+The below prototype draft illustrates how the team envisions the eventual R-Shiny application will enable individuals to perform the relevant visual analysis.
+
+-   **Basic Exploratory Analysis**
 
 ![](images/Proposal_Dashboard_1.PNG){width="426"}
 
+-   **Temporal Patterns Analysis**
+
 ![](images/Proposal_Dashboard_2.PNG){width="426"}
+
+-   **Relationship Analysis**
 
 ![](images/Proposal_Dashboard_3.PNG){width="427"}
 
+-   **Relationship Analysis -- Compare Predicted Bundles Data**
+
 ![](images/Proposal_Dashboard_4.PNG){width="428"}
+
+-   **Illegal Fishing Evidence**
 
 ![](images/Proposal_Dashboard_5.PNG){width="430"}
 
-# 5. Reference
+# 6. Reference
 
+Boerder, K., Miller, N. A., and Worm, B. (2018). Global hot spots of transshipment of fish catch at sea. Science Advance, 7(4), ([link](https://doi.org/10.1126/sciadv.aat7159))
 
+Collyns, Dan. (2022, October 26). Illegal fishing spurs billions in losses for developing countries, study says. The Guardian. ([link](https://www.theguardian.com/environment/2022/oct/26/illegal-fishing-billions-losses-developing-countries))
+
+Connect2India. (2020). HS Codes -- Fish, crustaceans, molluscs, aquatic invertebrates ne (3). ([link](https://connect2india.com/hs-codes-directory/hs-code-3))
+
+Singapore Customs. (2023). Understanding HS Classification. ([link](https://www.customs.gov.sg/businesses/harmonised-system-classification-of-goods/understanding-hs-classification))
+
+The Pew Charitable Trusts. (2023, April 19). Most global at-sea transshipment involves a small group of key carriers. ([link](https://www.pewtrusts.org/en/research-and-analysis/issue-briefs/2023/04/most-global-at-sea-transshipment-involves-a-small-group-of-key-carriers))
+
+World Ocean Review (2013). Plenty More Fish in the Sea?. ([link](https://worldoceanreview.com/wp-content/downloads/wor2/WOR2_en_chapter_3.pdf))
+
+World Wildlife Fund. (2023). ([link](https://www.worldwildlife.org/industries/sustainable-seafood))
+
+Petrossian, G.A., Barthuly, B., & Sosnowski, M.C. (2022). Identifying central carriers and detecting key communities within the global fish transshipment networks. Frontiers in Marine Science 9.([link](https://doi.org/10.3389/fmars.2022.798893))
 
                         |

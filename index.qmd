@@ -6,21 +6,18 @@ about:
   links:
     - icon: github
       text: Github
-
 ---
 
 ::: {#about-block}
 :::
 
-# Visual Analytics - Combating Illegal Fishing 
+# Visual Analytics - Combating Illegal Fishing
 
-Seafood is the largest traded food commodity, providing sustenance to more than 3 billion people worldwide. However, the United Nations Food and Agricultural Organization estimates that 85% of fish stocks are either overfished or fully exploited. Given the reliance on fish supply, transhipment is a crucial component of the global commercial fishing industry. 
+Seafood is the largest traded food commodity, providing sustenance to more than 3 billion people worldwide. However, the United Nations Food and Agricultural Organization estimates that 85% of fish stocks are either overfished or fully exploited. Given the reliance on fish supply, transshipment is a crucial component of the global commercial fishing industry. Transshipments at sea helps to increase fishing vessels' efficiency via eliminating the need to offload their catches at port while reducing overall operating costs. However, it also brings about the issues of enabling fishing vessels to obscure the catches origins which might have been caught illegally.
 
-Transhipments at sea helps to increase fishing vessels’ efficiency via eliminating the need to offload their catches at port while reducing overall operating costs. However, it also brings about the issues of enabling fishing vessels to obscure the catches origins which might have been caught illegally. 
+Illegal, unreported and unregulated (IUU) fishing has been estimated to contribute towards \$23.5 billion of losses annually. Aside from negative economic impact, IUU fishing is also a key contributor towards negative social and environmental impact across the world. While research and technology has been leveraged on to aid in the combat against illegal fishing, transshipment activities continue to be a key challenge.
 
-Illegal, unreported and unregulated (IUU) fishing has been estimated to contribute towards $23.5 billion of losses annually. Aside from negative economic impact, IUU fishing is also a key contributor towards negative social and environmental impact across the world. While research and technology has been leveraged on to aid in the combat against illegal fishing, transhipment activities continue to be a key challenge.  
-
-In this project, the team sets forth to utilise social network analysis techniques to gain a better understanding of the global fishing activities network to detect vessel relationships and distil key insights from the network graph. 
+In this project, the team sets forth to utilise social network analysis techniques to gain a better understanding of the global fishing activities network to detect vessel relationships and distil key insights from the network graph. To enable individuals and agencies to leverage on the work performed in this study, we will be leveraging on R-Studio and R-Shiny app to publish our analysis and build a user-friendly application for users to gain a better understanding into IUU fishing. The application will have a key focus towards anchoring on enabling a visual analysis into the relationships and temporal trends across entities to enable further investigation into suspicious entities as a first step towards combatting IUU fishing.
 
 This Visual Analytics Project is based on [VAST Challenge 2022 Mini-Challenge 2](https://vast-challenge.github.io/2023/MC2.html)
 

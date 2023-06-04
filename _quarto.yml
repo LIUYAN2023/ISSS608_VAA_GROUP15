@@ -20,13 +20,6 @@ website:
     - href: Poster.qmd
       text: Poster
       
-  right:
-    - icon: github
-      href: https://github.com
-    - icon: envelope
-      aria-label: email
-      href: "2022@mitb.smu.edu.sg"  
-
 format:
   html:
     code-fold: true
