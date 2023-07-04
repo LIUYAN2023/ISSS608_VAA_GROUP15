@@ -15,7 +15,7 @@ website:
       text: Proposal
     - href: UserGuide.qmd
       text: User Guide   
-    - href: "http://isss608vaa-2023apr-group15.shinyapps.io/Group15APP "
+    - href: "https://isss608vaa-2023apr-group15.shinyapps.io/Group15Final/"
       text: APP
     - href: Poster.qmd
       text: Poster

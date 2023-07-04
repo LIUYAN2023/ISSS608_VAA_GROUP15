@@ -1,5 +1,8 @@
 ---
-title: "Poster"
-author: "Group15"
+title: "UserGuide"
+author: "Group 15"
+date: "4 July 2023"
 editor: visual
 ---
+
+![](images/Group%2015%20Poster.jpg)
