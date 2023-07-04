@@ -11,7 +11,7 @@ about:
 ::: {#about-block}
 :::
 
-# Visual Analytics - Combating Illegal Fishing
+# An Interactive Exploration & Visualisation to detect IUU Fishing
 
 Seafood is the largest traded food commodity, providing sustenance to more than 3 billion people worldwide. However, the United Nations Food and Agricultural Organization estimates that 85% of fish stocks are either overfished or fully exploited. Given the reliance on fish supply, transshipment is a crucial component of the global commercial fishing industry. Transshipments at sea helps to increase fishing vessels' efficiency via eliminating the need to offload their catches at port while reducing overall operating costs. However, it also brings about the issues of enabling fishing vessels to obscure the catches origins which might have been caught illegally.
 

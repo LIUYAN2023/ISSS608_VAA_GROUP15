@@ -1,6 +1,7 @@
 ---
 title: "UserGuide"
-author: "Group15"
+author: "Group 15"
+date: "4 July 2023"
 editor: visual
 ---
 
@@ -73,7 +74,7 @@ In **Transaction Structure**: You can obtain an overall understanding on the dat
 
 • Control 6: Use this to customize the colour of the Packed Bar Chart
 
-Example of usage:
+### ***Example of usage:***
 
 **Step1:** In 2030, the highest median "Weight -- KG" is coming from HSCODE 303430.
 
@@ -89,6 +90,8 @@ Example of usage:
 
 **Step4:** If you wish to investigate other variables, set the variable field to other value (checking Volume Teu), and specify hscode (e.g. 160419), Mar del Este CJSC was found to have super high transaction volume.
 
+![](images/8.1.jpg){width="422"}
+
 **Step5:** Further check what is dedicated company's transaction structure,select Mar Del Este CJSC to check the packedBarChart statistics.
 
 ## 1-4 Fishing Transaction Overview -- Temporal Analysis
@@ -103,7 +106,7 @@ In **Temporal Analysis**: You can inspect the transaction movement (across vario
 
 • Control 3: Use this to configure the desired HSCODE for further investigation. Note that this only updates the Bar Chart
 
-***Example of usage:***
+### ***Example of usage:***
 
 By using Control 1, you will identify an abnormally high "Weight (kg)" and "Value of Goods (USD)" during August 2034 and June 2032 respectively. This might be an indicator of IUU fishing companies shutting down as a result of being caught.
 
@@ -121,7 +124,7 @@ In **Heatmap Activity Overview**: You can identify which entities/companies has 
 
 • Control 2: Use this to customise the colour of the Heatmap Plot
 
-***Example of usage:***
+### ***Example of usage:***
 
 With the Heatmap Plot, you can identify Madhya Pradesh Market LLC as a company that has high network activity during 2030 and 2031, before going silent within the fishing industry. This company might potentially be involved in IUU fishing who closed down as a result of being caught.
 
@@ -137,15 +140,15 @@ In **Centrality Plot**: You can uncover valuable insights on central entities an
 
 • Control 2: This selection affects the node size. You can configure the node size to your desired centrality metric as well
 
-***Example of usage:***
+### ***Example of usage:***
 
 **Step1:** You can begin by selecting "betweenness centrality" as a base to differentiate the colour of nodes, before proceeding to select "in degree" to illustrate the size of the nodes.
 
 ![](images/image15.png)
 
-**Step2:** As a result, you will then find two big nodes with median betweenness centrality (identified via the node colour) and high value for in-degree (identified via the node size). They might be potential big wholesalers who source several maritime products from various fishermen before reselling it to others. \| \| \|You can then proceed to select the two nodes to identify the company names and investigate their relationship with other companies.
+**Step2:** As a result, you will then find two big nodes with median betweenness centrality (identified via the node colour) and high value for in-degree (identified via the node size). They might be potential big wholesalers who source several maritime products from various fishermen before reselling it to others. You can then proceed to select the two nodes to identify the company names and investigate their relationship with other companies.
 
-As a result, you will find "hai an Corporation Wharf" and its associated suppliers.
+As a result, you will find "hǎi dǎn Corporation Wharf" and its associated suppliers.
 
 ![](images/image16.png){width="388"}
 
@@ -175,7 +178,7 @@ In **Main Network Graph**: You can interactively leverage on the tabular table a
 
 • Network Plot B: Focused egoNetwork plot for the selected company
 
-***Example of usage:***
+### ***Example of usage:***
 
 **Step1:** You can leverage on the data table to search for your identified suspicious node company. This will provide you with further details in relation to the company's HSCODE and Year etc. e.g., Search for hǎi dǎn Corporation Wharf by typing its name within the "source" column of the data table.
 
@@ -209,7 +212,7 @@ In **Bundles Network**: You can explore how each sub bundles (total of 12 sub bu
 
 • Control 4: Use this to customise your desired colour for the Network Plot  
 
-***Example of usage:***
+### ***Example of usage:***
 
 **Step1:** Select your desired Similarity Coefficient via Control 2. This will dynamically update the blue panel with the similarity numerical values.
 
@@ -251,7 +254,7 @@ In **Bundle Network Comparison**, the reliable bundles which was determined from
 
 • Control 4: Use this to customise your desired colour for the Network Plot
 
-***Example of usage:***
+### ***Example of usage:***
 
 **Step1:** You can begin by selecting your desired bundle (one which you've identified as a reliable bundle set within Section 3-1 Bundles Similarity Overview).
 
