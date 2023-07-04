@@ -3,9 +3,6 @@ about:
   template: jolla
   id: about-block
   image: "images/Illegal_fishing.jpg"
-  links:
-    - icon: github
-      text: "https://github.com/LIUYAN2023/ISSS608_VAA_GROUP15"
 ---
 
 ::: {#about-block}
@@ -20,5 +17,7 @@ Illegal, unreported and unregulated (IUU) fishing has been estimated to contribu
 In this project, the team sets forth to utilise social network analysis techniques to gain a better understanding of the global fishing activities network to detect vessel relationships and distil key insights from the network graph. To enable individuals and agencies to leverage on the work performed in this study, we will be leveraging on R-Studio and R-Shiny app to publish our analysis and build a user-friendly application for users to gain a better understanding into IUU fishing. The application will have a key focus towards anchoring on enabling a visual analysis into the relationships and temporal trends across entities to enable further investigation into suspicious entities as a first step towards combatting IUU fishing.
 
 This Visual Analytics Project is based on [VAST Challenge 2022 Mini-Challenge 2](https://vast-challenge.github.io/2023/MC2.html)
+
+We would like to mention our special thanks to Professor KAM Tin Seong for his teaching, guidance, and support for this project.
 
 Hope that browsing this web brings you as much joy as we experienced in creating it.
