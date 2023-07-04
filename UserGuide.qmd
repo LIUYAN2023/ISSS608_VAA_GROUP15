@@ -75,13 +75,21 @@ In **Transaction Structure**: You can obtain an overall understanding on the dat
 
 Example of usage:
 
-| Steps                                                                                                                                                                                                        | Example                                      |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| In 2030, the highest median "Weight -- KG" is coming from HSCODE 303430.                                                                                                                                     | ![](images/image6.png){width="260"}          |
-| Select HSCODE 303430 for further investigation. You can pick more than one HSCODE for multiple comparison.                                                                                                   | ![](images/image7.png)                       |
-| Mouseover the Box Plot to gain a better understanding on each individual data point to identify companies who are potential outliers. In this case, Costa de Oro CJSC was identified.                        | ![](images/image8.png)                       |
-| If you wish to investigate other variables, set the variable field to other value (checking Volume Teu), and specify hscode (e.g. 160419), Mar del Este CJSC was found to have super high transaction volume | ![](images/image7.png)![](images/image8.png) |
-| Further check what is dedicated company's transaction structure,select Mar Del Este CJSC to check the packedBarChart statistics.                                                                             |                                              |
+**Step1:** In 2030, the highest median "Weight -- KG" is coming from HSCODE 303430.
+
+![](images/image6.png){width="286"}
+
+**Step2:** Select HSCODE 303430 for further investigation. You can pick more than one HSCODE for multiple comparison.
+
+![](images/image7.png){width="157"}
+
+**Step3:** Mouseover the Box Plot to gain a better understanding on each individual data point to identify companies who are potential outliers. In this case, Costa de Oro CJSC was identified.
+
+![](images/image8.png){width="310"}
+
+**Step4:** If you wish to investigate other variables, set the variable field to other value (checking Volume Teu), and specify hscode (e.g. 160419), Mar del Este CJSC was found to have super high transaction volume.
+
+**Step5:** Further check what is dedicated company's transaction structure,select Mar Del Este CJSC to check the packedBarChart statistics.
 
 ## 1-4 Fishing Transaction Overview -- Temporal Analysis
 
@@ -95,13 +103,13 @@ In **Temporal Analysis**: You can inspect the transaction movement (across vario
 
 • Control 3: Use this to configure the desired HSCODE for further investigation. Note that this only updates the Bar Chart
 
-Example of usage:
+***Example of usage:***
 
 By using Control 1, you will identify an abnormally high "Weight (kg)" and "Value of Goods (USD)" during August 2034 and June 2032 respectively. This might be an indicator of IUU fishing companies shutting down as a result of being caught.
 
-![](images/image10.png)
+![](images/image10.png){width="338"}
 
-![](images/image11.png)
+![](images/image11.png){width="351"}
 
 ## 1-5 Fishing Transaction Overview -- Heatmap Activity Overview
 
@@ -113,7 +121,7 @@ In **Heatmap Activity Overview**: You can identify which entities/companies has 
 
 • Control 2: Use this to customise the colour of the Heatmap Plot
 
-Example of usage:
+***Example of usage:***
 
 With the Heatmap Plot, you can identify Madhya Pradesh Market LLC as a company that has high network activity during 2030 and 2031, before going silent within the fishing industry. This company might potentially be involved in IUU fishing who closed down as a result of being caught.
 
@@ -129,21 +137,23 @@ In **Centrality Plot**: You can uncover valuable insights on central entities an
 
 • Control 2: This selection affects the node size. You can configure the node size to your desired centrality metric as well
 
-Example of usage:
+***Example of usage:***
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+
-| Steps                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Example                 |
-+===============================================================================================================================================================================================================================================================================================================================================================================================================================================================+=========================+
-| You can begin by selecting "betweenness centrality" as a base to differentiate the colour of nodes, before proceeding to select "in degree" to illustrate the size of the nodes.                                                                                                                                                                                                                                                                              | ![](images/image15.png) |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+
-| As a result, you will then find two big nodes with median betweenness centrality (identified via the node colour) and high value for in-degree (identified via the node size). They might be potential big wholesalers who source several maritime products from various fishermen before reselling it to others. \| \| \|You can then proceed to select the two nodes to identify the company names and investigate their relationship with other companies. | ![](images/image16.png) |
-|                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                         |
-| As a result, you will find "hai an Corporation Wharf" and its associated suppliers.                                                                                                                                                                                                                                                                                                                                                                           | ![](images/image17.png) |
-|                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                         |
-| Similarly, you will be able to find "Mar Del Este CJSC" and its associated connections.                                                                                                                                                                                                                                                                                                                                                                       |                         |
-|                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                         |
-| A further investigation reveals an interesting insight where these two companies have similar connection and supply networks.                                                                                                                                                                                                                                                                                                                                 |                         |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+
+**Step1:** You can begin by selecting "betweenness centrality" as a base to differentiate the colour of nodes, before proceeding to select "in degree" to illustrate the size of the nodes.
+
+![](images/image15.png)
+
+**Step2:** As a result, you will then find two big nodes with median betweenness centrality (identified via the node colour) and high value for in-degree (identified via the node size). They might be potential big wholesalers who source several maritime products from various fishermen before reselling it to others. \| \| \|You can then proceed to select the two nodes to identify the company names and investigate their relationship with other companies.
+
+As a result, you will find "hai an Corporation Wharf" and its associated suppliers.
+
+![](images/image16.png){width="388"}
+
+Similarly, you will be able to find "Mar Del Este CJSC" and its associated connections.
+
+![](images/image17.png){width="396"}
+
+A further investigation reveals an interesting insight where these two companies have similar connection and supply networks.
 
 ## 2-2 Fishing Transaction Network -- Main Network Graph
 
@@ -165,23 +175,25 @@ In **Main Network Graph**: You can interactively leverage on the tabular table a
 
 • Network Plot B: Focused egoNetwork plot for the selected company
 
-Example of usage:
+***Example of usage:***
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| Steps                                                                                                                                                                                                                                                                                                                                         | Example                                                |
-+===============================================================================================================================================================================================================================================================================================================================================+========================================================+
-| You can leverage on the data table to search for your identified suspicious node company. This will provide you with further details in relation to the company's HSCODE and Year etc. e.g., Search for hai dan Corporation Wharf by typing its name within the "source" column of the data table.                                            | ![](images/image19.png)                                |
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| Within the main Network Plot, you can first select your desired HSCODE and Year (identified via the data table), before configuring your desired stable threshold value. When you select 3 as the stable threshold value, this means that all the nodes with equal to /less than 3 years of existence will be regarded as an unstable entity. | ![](images/image20.png)                                |
-|                                                                                                                                                                                                                                                                                                                                               |                                                        |
-| With the configurations configured as per the steps above, you can leverage on the Network Plot to visually detect Unstable Supplier or Buyer who might be involved in IUU fishing.                                                                                                                                                           |                                                        |
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-| Upon identifying the "suspicious" company who might be involved in IUU fishing, you can then leverage on the interactive data table to search for your desired company and obtain the HSCODE in scope.                                                                                                                                        | ![](images/image21%20(Needs%20to%20be%20Replaced).png) |
-|                                                                                                                                                                                                                                                                                                                                               |                                                        |
-| You can also toggle the Network Plot across the years to gain a deeper insight into how the network graph changes over the years.                                                                                                                                                                                                             |                                                        |
-|                                                                                                                                                                                                                                                                                                                                               |                                                        |
-| Finally, for a focused analysis, you can also leverage on the egoNetwork Plot to delve deeper into your desired source companies and its immediate "one-degree" connection.                                                                                                                                                                   |                                                        |
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+**Step1:** You can leverage on the data table to search for your identified suspicious node company. This will provide you with further details in relation to the company's HSCODE and Year etc. e.g., Search for hǎi dǎn Corporation Wharf by typing its name within the "source" column of the data table.
+
+![](images/image19.png){width="421"}
+
+**Step2:** Within the main Network Plot, you can first select your desired HSCODE and Year (identified via the data table), before configuring your desired stable threshold value. When you select 3 as the stable threshold value, this means that all the nodes with equal to /less than 3 years of existence will be regarded as an unstable entity.
+
+With the configurations configured as per the steps above, you can leverage on the Network Plot to visually detect Unstable Supplier or Buyer who might be involved in IUU fishing.
+
+![](images/image20.png)
+
+**Step3:** Upon identifying the "suspicious" company who might be involved in IUU fishing, you can then leverage on the interactive data table to search for your desired company and obtain the HSCODE in scope.
+
+You can also toggle the Network Plot across the years to gain a deeper insight into how the network graph changes over the years.
+
+Finally, for a focused analysis, you can also leverage on the egoNetwork Plot to delve deeper into your desired source companies and its immediate "one-degree" connection.
+
+![](images/image21%20(Needs%20to%20be%20Replaced).png)
 
 ## 3-1 Bundles Network -- Bundle Similarity
 
@@ -197,27 +209,33 @@ In **Bundles Network**: You can explore how each sub bundles (total of 12 sub bu
 
 • Control 4: Use this to customise your desired colour for the Network Plot  
 
-Example of usage:
+***Example of usage:***
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+
-| Steps                                                                                                                                                                                                                  | Example                                        |
-+========================================================================================================================================================================================================================+================================================+
-| Select your desired Similarity Coefficient via Control 2. This will dynamically update the blue panel with the similarity numerical values.                                                                            | ![](images/image23.png)                        |
-|                                                                                                                                                                                                                        |                                                |
-| Additionally, there is also a table that looks at the selected Similarity Coefficient metric across the 12 bundles in a seamless manner. The data table allows users to easily compare the reliability of the bundles. |                                                |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+
-| Select your desired bundle (e.g., Tuna) via Control 1 to plot out the network diagram for easy visualisation. Edge and border colours within the network graph can also be easily customised via Control 4.            | ![](images/image24.png)                        |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+
-| Select the nodes on the left-hand side (LHS) of the plot. This will interactively highlight the corresponding node (in red colour) on the right-hand side (RHS) of the plot.                                           | ![](images/image26.png)![](images/image25.png) |
-|                                                                                                                                                                                                                        |                                                |
-| You can also leverage on the dropdown field to select your desired company e.g., hai dan Corporation Wharf                                                                                                             |                                                |
-|                                                                                                                                                                                                                        |                                                |
-| Hai dan Corporation Wharf has similar 1st degree of network connectivity on both the LHS and RHS of the plot.                                                                                                          |                                                |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+
-| By leveraging on the Bundle and Matching plot, you can easily compare and understand what are the nodes that contribute to the key differences between the bundle and its corresponding matching plot.                 | ![](images/image28.png)![](images/image27.png) |
-|                                                                                                                                                                                                                        |                                                |
-| For example, in the cod bundle dataset, you will observe a missing connection from "-53".                                                                                                                              |                                                |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+
+**Step1:** Select your desired Similarity Coefficient via Control 2. This will dynamically update the blue panel with the similarity numerical values.
+
+Additionally, there is also a table that looks at the selected Similarity Coefficient metric across the 12 bundles in a seamless manner. The data table allows users to easily compare the reliability of the bundles.
+
+![](images/image23.png)
+
+**Step2:** Select your desired bundle (e.g., Tuna) via Control 1 to plot out the network diagram for easy visualisation. Edge and border colours within the network graph can also be easily customised via Control 4.
+
+![](images/image24.png)
+
+**Step3:** Select the nodes on the left-hand side (LHS) of the plot. This will interactively highlight the corresponding node (in red colour) on the right-hand side (RHS) of the plot.
+
+You can also leverage on the dropdown field to select your desired company e.g., hǎi dǎn Corporation Wharf
+
+hǎi dǎn Corporation Wharf has similar 1st degree of network connectivity on both the LHS and RHS of the plot.![](images/image25.png)
+
+![](images/image26.png)
+
+**Step4:** By leveraging on the Bundle and Matching plot, you can easily compare and understand what are the nodes that contribute to the key differences between the bundle and its corresponding matching plot.
+
+For example, in the cod bundle dataset, you will observe a missing connection from "-53".
+
+![](images/image27.png)
+
+![](images/image28.png)
 
 ## 3-2 Bundles Network -- Bundle Network Comparison
 
@@ -233,20 +251,28 @@ In **Bundle Network Comparison**, the reliable bundles which was determined from
 
 • Control 4: Use this to customise your desired colour for the Network Plot
 
-Example of usage:
+***Example of usage:***
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+
-| Steps                                                                                                                                                                                                                                                                                                                                 | Example                                        |
-+=======================================================================================================================================================================================================================================================================================================================================+================================================+
-| You can begin by selecting your desired bundle (one which you've identified as a reliable bundle set within Section 3-1 Bundles Similarity Overview).                                                                                                                                                                                 | ![](images/image30.png)                        |
-|                                                                                                                                                                                                                                                                                                                                       |                                                |
-| Using Carp as an example, you can select your desired similarity coefficient, graph layout and colour scheme to customise your Network Plot for a visual analysis.                                                                                                                                                                    |                                                |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+
-| Mouse over the nodes on either side of the plot (either LHS or RHS) to seamlessly highlight them (note that the same node on the corresponding plot side will be highlighted in red) and visualise how the LHS and RHS plots are different from each other.                                                                           | ![](images/image31.png)                        |
-|                                                                                                                                                                                                                                                                                                                                       |                                                |
-| You can also leverage on the dropdown field to find the company which you are keen to explore e.g., hai dan Corporation Wharf.                                                                                                                                                                                                        |                                                |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+
-| Hai dan Corporation Wharf has similar 1st degree of network connectivity on both the LHS and RHS of the plot. The key feature of the Bundle Network Comparison enables you to seamlessly and visually identify the difference in nodes connection between the "Original Plot" and "Combined Plot -- post adding in the bundle edges". | ![](images/image33.png)![](images/image32.png) |
-|                                                                                                                                                                                                                                                                                                                                       |                                                |
-| Using Lichen bundle as an example, you will observe that the Combined Plot has two new connections for hai dan Corporation Wharf. Similarly, in the Shark bundle, hai dan Corporation Wharf has two new connections after weaving in the bundle's edges.                                                                              |                                                |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+
+**Step1:** You can begin by selecting your desired bundle (one which you've identified as a reliable bundle set within Section 3-1 Bundles Similarity Overview).
+
+Using Carp as an example, you can select your desired similarity coefficient, graph layout and colour scheme to customise your Network Plot for a visual analysis.
+
+![](images/image30.png)
+
+**Step2:** Mouse over the nodes on either side of the plot (either LHS or RHS) to seamlessly highlight them (note that the same node on the corresponding plot side will be highlighted in red) and visualise how the LHS and RHS plots are different from each other.
+
+You can also leverage on the dropdown field to find the company which you are keen to explore e.g., hǎi dǎn Corporation Wharf.
+
+![](images/image31.png)
+
+**Step3:** hǎi dǎn Corporation Wharf has similar 1st degree of network connectivity on both the LHS and RHS of the plot. The key feature of the Bundle Network Comparison enables you to seamlessly and visually identify the difference in nodes connection between the "Original Plot" and "Combined Plot -- post adding in the bundle edges".
+
+Using Lichen bundle as an example, you will observe that the Combined Plot has two new connections for hǎi dǎn Corporation Wharf. Similarly, in the Shark bundle, hǎi dǎn Corporation Wharf has two new connections after weaving in the bundle's edges.
+
+Lichen bundle:
+
+![](images/image33.png)
+
+Shark bundle:
+
+![](images/image32.png)
