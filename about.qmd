@@ -3,5 +3,4 @@ title: "Our Teams"
 ---
 
 
-
-![](images/Group%20Memember.PNG){fig-align="center"}
+![](images/Group%20Memember.PNG){fig-align="center" width="460"}
