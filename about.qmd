@@ -1,9 +1,7 @@
 ---
-title: "About"
+title: "Our Teams"
 ---
 
-About this site
 
-```{r}
-1 + 1
-```
+
+![](images/Group%20Memember.PNG){fig-align="center"}

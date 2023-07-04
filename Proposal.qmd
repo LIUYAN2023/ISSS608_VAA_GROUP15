@@ -1,7 +1,7 @@
 ---
 title: "Proposal"
-author: "Group15"
-Date: "2023-06-03"
+author: "Group 15"
+date: "6 June 2023"
 editor: visual
 ---
 
@@ -38,14 +38,14 @@ There are 2 sets of data from the [Mini-Challenge 2](https://vast-challenge.gith
 "mc2_challenge_graph" is a directed multi-graph, therefore it is possible for multiple edges between the same two nodes to exist. The graph format is saved as a json format, we will break it to match node-link format and make it compatible with network graph. Since it's a network Graph data, there are links and nodes related to it.
 
 | **Node Attributes**  | Description                                                      | **Action**    |
-|------------------|-------------------------------------|------------------|
+|----------------------|------------------------------------------------------------------|---------------|
 | id                   | Name of the company that originated (or received) the shipment   | Keep and use  |
 | shpcountry           | Country the company most often associated with when shipping     | Keep and use  |
 | rcvcountry           | Country the company most often associated with when receiving    | Keep and use  |
 | dataset              | Always 'MC2'                                                     | remove        |
 
 | **Edge Attributes**  | Description                                                                                                                    | **Action**    |
-|------------------|-------------------------------------|------------------|
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------|
 | arrivaldate          | Date the shipment arrived at port in YYYY-MM-DD format                                                                         | Keep and use  |
 | hscode               | Harmonized System code for the shipment. Can be joined with the hscodes table to get additional details.                       | Keep and use  |
 | valueofgoods_omu     | Customs-declared value of the total shipment, in Oceanus Monetary Units (OMU)                                                  | Keep and use  |
